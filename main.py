@@ -5,7 +5,7 @@ if __name__ == "__main__":
     user_name = input()
 
     print(f"BOT: Nice meeting you {user_name}!")
-    print("BOT: Ask a question!\nExamples:\n- Whats the weather\n- Play Game\n- Are you a robot?")
+    print("BOT: Ask a question!\nExamples:\n- Whats the weather\n- Play Game\n- Are you a robot?\n - Random Number Generator from 0 to 100\n- Exit")
     # \n means to use a new line
     while True:
         my_input = input() #input will ask you for a response in terminal
