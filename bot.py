@@ -4,6 +4,7 @@ from rps import rock_paper_scissors_game
 
 # ---------------- CONSTANTS -------------------------------
 WEATHER = "rainy"
+lower_bound, upper_bound = 0, 100
 RESPONSES = { #Dictionary with question as key, and a list of responses as values
   "whats today's weather?":[
     f"The weather is {WEATHER}",
@@ -19,6 +20,10 @@ RESPONSES = { #Dictionary with question as key, and a list of responses as value
 
   "exit":[
     "Bye, see you later"
+  ],
+
+  "number": [
+    "The random number is : " + str(random.randint(lower_bound, upper_bound))
   ],
 
   "default":
@@ -50,6 +55,8 @@ def related(x_text):
     y_text = "exit"
   elif "game" in x_text: #similar idea as above, but with the word game, to initiate the rock_paper_scissors_game() function from the rps.py file you made
     rock_paper_scissors_game()
+  elif "number" in x_text:
+    y_text = "number"
   else: #if your message doesn't contain any of the words above, your message is treated as a blank message
     y_text = ""
   return y_text #output for the function 'related', becomes one of the strings from the keys of dictionary RESPONSES,
