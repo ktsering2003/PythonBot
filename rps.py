@@ -1,5 +1,5 @@
+""" Kunsang Tsering """
 import random
-
 def rock_paper_scissors_game():
     while True:
         
